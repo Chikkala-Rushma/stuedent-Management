@@ -9,8 +9,9 @@ const app = express();
 app.use(express.json());
 
 const PORT = process.env.PORT || 300;
-
-mongoose.connect(process.env.MONGO_URI, {
+const mongoURI = process.env.MONGO_URI; 
+console.log("MongoDB URI:", mongoURI);
+mongoose.connect(mongoURI, {
     // directConnection: true
   })
   .then(() => console.log("Connected to MongoDB"))
