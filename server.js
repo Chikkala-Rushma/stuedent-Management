@@ -11,7 +11,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 300;
 const mongoURI = process.env.MONGO_URI; 
 console.log("MongoDB URI:", mongoURI);
-mongoose.connect(mongoURI, {
+mongoose.connect("mongodb+srv://rushma:Ch%40newton75@studentmangement.uqjde.mongodb.net/StudentManagement?retryWrites=true&w=majority&ssl=true", {
     // directConnection: true
   })
   .then(() => console.log("Connected to MongoDB"))
